@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96B7B1921D945A1C009C6F1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1911D945A1C009C6F1F /* main.m */; };
+		96B7B1951D945A1C009C6F1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1941D945A1C009C6F1F /* AppDelegate.m */; };
+		96B7B1981D945A1C009C6F1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1971D945A1C009C6F1F /* ViewController.m */; };
+		96B7B19B1D945A1C009C6F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B7B1991D945A1C009C6F1F /* Main.storyboard */; };
+		96B7B19D1D945A1C009C6F1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B7B19C1D945A1C009C6F1F /* Assets.xcassets */; };
+		96B7B1A01D945A1C009C6F1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B7B19E1D945A1C009C6F1F /* LaunchScreen.storyboard */; };
+		96B7B1AB1D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1AA1D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests.m */; };
+		96B7B1B61D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1B51D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests.m */; };
+		96B7B1C61D945A54009C6F1F /* SGPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1C51D945A54009C6F1F /* SGPickerView.m */; };
+		96B7B1C91D945A66009C6F1F /* SGDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1C81D945A66009C6F1F /* SGDatePicker.m */; };
+		96B7B1CB1D945B03009C6F1F /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96B7B1CA1D945B03009C6F1F /* Address.plist */; };
+		96B7B1CE1D945DCC009C6F1F /* SGLocationPickerSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1CD1D945DCC009C6F1F /* SGLocationPickerSheetView.m */; };
+		96B7B1D11D945DE4009C6F1F /* SGLocationPickerCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1D01D945DE4009C6F1F /* SGLocationPickerCenterView.m */; };
+		96B7B1D31D945DF5009C6F1F /* SGLocationPickerSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B7B1D21D945DF5009C6F1F /* SGLocationPickerSheetView.xib */; };
+		96B7B1D51D945E03009C6F1F /* SGLocationPickerCenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B7B1D41D945E03009C6F1F /* SGLocationPickerCenterView.xib */; };
+		96B7B1D81D945E71009C6F1F /* SGDatePickerSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1D71D945E71009C6F1F /* SGDatePickerSheetView.m */; };
+		96B7B1DB1D945E87009C6F1F /* SGDatePickerCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7B1DA1D945E87009C6F1F /* SGDatePickerCenterView.m */; };
+		96B7B1DD1D945E94009C6F1F /* SGDatePickerSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B7B1DC1D945E94009C6F1F /* SGDatePickerSheetView.xib */; };
+		96B7B1DF1D945EA4009C6F1F /* SGDatePickerCenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B7B1DE1D945EA4009C6F1F /* SGDatePickerCenterView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96B7B1A71D945A1C009C6F1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96B7B1851D945A1C009C6F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96B7B18C1D945A1C009C6F1F;
+			remoteInfo = SGPickerView_DatePickerExample;
+		};
+		96B7B1B21D945A1C009C6F1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96B7B1851D945A1C009C6F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96B7B18C1D945A1C009C6F1F;
+			remoteInfo = SGPickerView_DatePickerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96B7B18D1D945A1C009C6F1F /* SGPickerView_DatePickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGPickerView_DatePickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B7B1911D945A1C009C6F1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96B7B1931D945A1C009C6F1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96B7B1941D945A1C009C6F1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96B7B1961D945A1C009C6F1F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96B7B1971D945A1C009C6F1F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96B7B19A1D945A1C009C6F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96B7B19C1D945A1C009C6F1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96B7B19F1D945A1C009C6F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96B7B1A11D945A1C009C6F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B7B1A61D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGPickerView_DatePickerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B7B1AA1D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGPickerView_DatePickerExampleTests.m; sourceTree = "<group>"; };
+		96B7B1AC1D945A1C009C6F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B7B1B11D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGPickerView_DatePickerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B7B1B51D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGPickerView_DatePickerExampleUITests.m; sourceTree = "<group>"; };
+		96B7B1B71D945A1C009C6F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B7B1C41D945A54009C6F1F /* SGPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPickerView.h; sourceTree = "<group>"; };
+		96B7B1C51D945A54009C6F1F /* SGPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPickerView.m; sourceTree = "<group>"; };
+		96B7B1C71D945A66009C6F1F /* SGDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDatePicker.h; sourceTree = "<group>"; };
+		96B7B1C81D945A66009C6F1F /* SGDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDatePicker.m; sourceTree = "<group>"; };
+		96B7B1CA1D945B03009C6F1F /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
+		96B7B1CC1D945DCC009C6F1F /* SGLocationPickerSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLocationPickerSheetView.h; sourceTree = "<group>"; };
+		96B7B1CD1D945DCC009C6F1F /* SGLocationPickerSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGLocationPickerSheetView.m; sourceTree = "<group>"; };
+		96B7B1CF1D945DE4009C6F1F /* SGLocationPickerCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLocationPickerCenterView.h; sourceTree = "<group>"; };
+		96B7B1D01D945DE4009C6F1F /* SGLocationPickerCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGLocationPickerCenterView.m; sourceTree = "<group>"; };
+		96B7B1D21D945DF5009C6F1F /* SGLocationPickerSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGLocationPickerSheetView.xib; sourceTree = "<group>"; };
+		96B7B1D41D945E03009C6F1F /* SGLocationPickerCenterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGLocationPickerCenterView.xib; sourceTree = "<group>"; };
+		96B7B1D61D945E71009C6F1F /* SGDatePickerSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDatePickerSheetView.h; sourceTree = "<group>"; };
+		96B7B1D71D945E71009C6F1F /* SGDatePickerSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDatePickerSheetView.m; sourceTree = "<group>"; };
+		96B7B1D91D945E87009C6F1F /* SGDatePickerCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDatePickerCenterView.h; sourceTree = "<group>"; };
+		96B7B1DA1D945E87009C6F1F /* SGDatePickerCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDatePickerCenterView.m; sourceTree = "<group>"; };
+		96B7B1DC1D945E94009C6F1F /* SGDatePickerSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGDatePickerSheetView.xib; sourceTree = "<group>"; };
+		96B7B1DE1D945EA4009C6F1F /* SGDatePickerCenterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGDatePickerCenterView.xib; sourceTree = "<group>"; };
+		96B7B1E31D946878009C6F1F /* SGPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPicker.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96B7B18A1D945A1C009C6F1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B7B1A31D945A1C009C6F1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B7B1AE1D945A1C009C6F1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96B7B1841D945A1C009C6F1F = {
+			isa = PBXGroup;
+			children = (
+				96B7B1C31D945A37009C6F1F /* SGPickerView_DatePicker */,
+				96B7B18F1D945A1C009C6F1F /* SGPickerView_DatePickerExample */,
+				96B7B1A91D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests */,
+				96B7B1B41D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests */,
+				96B7B18E1D945A1C009C6F1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96B7B18E1D945A1C009C6F1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96B7B18D1D945A1C009C6F1F /* SGPickerView_DatePickerExample.app */,
+				96B7B1A61D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests.xctest */,
+				96B7B1B11D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96B7B18F1D945A1C009C6F1F /* SGPickerView_DatePickerExample */ = {
+			isa = PBXGroup;
+			children = (
+				96B7B1931D945A1C009C6F1F /* AppDelegate.h */,
+				96B7B1941D945A1C009C6F1F /* AppDelegate.m */,
+				96B7B1961D945A1C009C6F1F /* ViewController.h */,
+				96B7B1971D945A1C009C6F1F /* ViewController.m */,
+				96B7B1991D945A1C009C6F1F /* Main.storyboard */,
+				96B7B19C1D945A1C009C6F1F /* Assets.xcassets */,
+				96B7B1CA1D945B03009C6F1F /* Address.plist */,
+				96B7B19E1D945A1C009C6F1F /* LaunchScreen.storyboard */,
+				96B7B1A11D945A1C009C6F1F /* Info.plist */,
+				96B7B1901D945A1C009C6F1F /* Supporting Files */,
+			);
+			path = SGPickerView_DatePickerExample;
+			sourceTree = "<group>";
+		};
+		96B7B1901D945A1C009C6F1F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96B7B1911D945A1C009C6F1F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96B7B1A91D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				96B7B1AA1D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests.m */,
+				96B7B1AC1D945A1C009C6F1F /* Info.plist */,
+			);
+			path = SGPickerView_DatePickerExampleTests;
+			sourceTree = "<group>";
+		};
+		96B7B1B41D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96B7B1B51D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests.m */,
+				96B7B1B71D945A1C009C6F1F /* Info.plist */,
+			);
+			path = SGPickerView_DatePickerExampleUITests;
+			sourceTree = "<group>";
+		};
+		96B7B1C31D945A37009C6F1F /* SGPickerView_DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				96B7B1E31D946878009C6F1F /* SGPicker.h */,
+				96B7B1C41D945A54009C6F1F /* SGPickerView.h */,
+				96B7B1C51D945A54009C6F1F /* SGPickerView.m */,
+				96B7B1C71D945A66009C6F1F /* SGDatePicker.h */,
+				96B7B1C81D945A66009C6F1F /* SGDatePicker.m */,
+				96B7B1CC1D945DCC009C6F1F /* SGLocationPickerSheetView.h */,
+				96B7B1CD1D945DCC009C6F1F /* SGLocationPickerSheetView.m */,
+				96B7B1D21D945DF5009C6F1F /* SGLocationPickerSheetView.xib */,
+				96B7B1CF1D945DE4009C6F1F /* SGLocationPickerCenterView.h */,
+				96B7B1D01D945DE4009C6F1F /* SGLocationPickerCenterView.m */,
+				96B7B1D41D945E03009C6F1F /* SGLocationPickerCenterView.xib */,
+				96B7B1D61D945E71009C6F1F /* SGDatePickerSheetView.h */,
+				96B7B1D71D945E71009C6F1F /* SGDatePickerSheetView.m */,
+				96B7B1DC1D945E94009C6F1F /* SGDatePickerSheetView.xib */,
+				96B7B1D91D945E87009C6F1F /* SGDatePickerCenterView.h */,
+				96B7B1DA1D945E87009C6F1F /* SGDatePickerCenterView.m */,
+				96B7B1DE1D945EA4009C6F1F /* SGDatePickerCenterView.xib */,
+			);
+			path = SGPickerView_DatePicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96B7B18C1D945A1C009C6F1F /* SGPickerView_DatePickerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B7B1BA1D945A1C009C6F1F /* Build configuration list for PBXNativeTarget "SGPickerView_DatePickerExample" */;
+			buildPhases = (
+				96B7B1891D945A1C009C6F1F /* Sources */,
+				96B7B18A1D945A1C009C6F1F /* Frameworks */,
+				96B7B18B1D945A1C009C6F1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGPickerView_DatePickerExample;
+			productName = SGPickerView_DatePickerExample;
+			productReference = 96B7B18D1D945A1C009C6F1F /* SGPickerView_DatePickerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96B7B1A51D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B7B1BD1D945A1C009C6F1F /* Build configuration list for PBXNativeTarget "SGPickerView_DatePickerExampleTests" */;
+			buildPhases = (
+				96B7B1A21D945A1C009C6F1F /* Sources */,
+				96B7B1A31D945A1C009C6F1F /* Frameworks */,
+				96B7B1A41D945A1C009C6F1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96B7B1A81D945A1C009C6F1F /* PBXTargetDependency */,
+			);
+			name = SGPickerView_DatePickerExampleTests;
+			productName = SGPickerView_DatePickerExampleTests;
+			productReference = 96B7B1A61D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96B7B1B01D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B7B1C01D945A1C009C6F1F /* Build configuration list for PBXNativeTarget "SGPickerView_DatePickerExampleUITests" */;
+			buildPhases = (
+				96B7B1AD1D945A1C009C6F1F /* Sources */,
+				96B7B1AE1D945A1C009C6F1F /* Frameworks */,
+				96B7B1AF1D945A1C009C6F1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96B7B1B31D945A1C009C6F1F /* PBXTargetDependency */,
+			);
+			name = SGPickerView_DatePickerExampleUITests;
+			productName = SGPickerView_DatePickerExampleUITests;
+			productReference = 96B7B1B11D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96B7B1851D945A1C009C6F1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Jason;
+				TargetAttributes = {
+					96B7B18C1D945A1C009C6F1F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					96B7B1A51D945A1C009C6F1F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 96B7B18C1D945A1C009C6F1F;
+					};
+					96B7B1B01D945A1C009C6F1F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 96B7B18C1D945A1C009C6F1F;
+					};
+				};
+			};
+			buildConfigurationList = 96B7B1881D945A1C009C6F1F /* Build configuration list for PBXProject "SGPickerView_DatePickerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96B7B1841D945A1C009C6F1F;
+			productRefGroup = 96B7B18E1D945A1C009C6F1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96B7B18C1D945A1C009C6F1F /* SGPickerView_DatePickerExample */,
+				96B7B1A51D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests */,
+				96B7B1B01D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96B7B18B1D945A1C009C6F1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B7B1D51D945E03009C6F1F /* SGLocationPickerCenterView.xib in Resources */,
+				96B7B1A01D945A1C009C6F1F /* LaunchScreen.storyboard in Resources */,
+				96B7B1CB1D945B03009C6F1F /* Address.plist in Resources */,
+				96B7B1D31D945DF5009C6F1F /* SGLocationPickerSheetView.xib in Resources */,
+				96B7B19D1D945A1C009C6F1F /* Assets.xcassets in Resources */,
+				96B7B1DF1D945EA4009C6F1F /* SGDatePickerCenterView.xib in Resources */,
+				96B7B1DD1D945E94009C6F1F /* SGDatePickerSheetView.xib in Resources */,
+				96B7B19B1D945A1C009C6F1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B7B1A41D945A1C009C6F1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B7B1AF1D945A1C009C6F1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96B7B1891D945A1C009C6F1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B7B1D11D945DE4009C6F1F /* SGLocationPickerCenterView.m in Sources */,
+				96B7B1C91D945A66009C6F1F /* SGDatePicker.m in Sources */,
+				96B7B1C61D945A54009C6F1F /* SGPickerView.m in Sources */,
+				96B7B1DB1D945E87009C6F1F /* SGDatePickerCenterView.m in Sources */,
+				96B7B1981D945A1C009C6F1F /* ViewController.m in Sources */,
+				96B7B1D81D945E71009C6F1F /* SGDatePickerSheetView.m in Sources */,
+				96B7B1CE1D945DCC009C6F1F /* SGLocationPickerSheetView.m in Sources */,
+				96B7B1951D945A1C009C6F1F /* AppDelegate.m in Sources */,
+				96B7B1921D945A1C009C6F1F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B7B1A21D945A1C009C6F1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B7B1AB1D945A1C009C6F1F /* SGPickerView_DatePickerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B7B1AD1D945A1C009C6F1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B7B1B61D945A1C009C6F1F /* SGPickerView_DatePickerExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96B7B1A81D945A1C009C6F1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96B7B18C1D945A1C009C6F1F /* SGPickerView_DatePickerExample */;
+			targetProxy = 96B7B1A71D945A1C009C6F1F /* PBXContainerItemProxy */;
+		};
+		96B7B1B31D945A1C009C6F1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96B7B18C1D945A1C009C6F1F /* SGPickerView_DatePickerExample */;
+			targetProxy = 96B7B1B21D945A1C009C6F1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96B7B1991D945A1C009C6F1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96B7B19A1D945A1C009C6F1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96B7B19E1D945A1C009C6F1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96B7B19F1D945A1C009C6F1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96B7B1B81D945A1C009C6F1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96B7B1B91D945A1C009C6F1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96B7B1BB1D945A1C009C6F1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SGPickerView_DatePickerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jason.SGPickerView-DatePickerExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96B7B1BC1D945A1C009C6F1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SGPickerView_DatePickerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jason.SGPickerView-DatePickerExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		96B7B1BE1D945A1C009C6F1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SGPickerView_DatePickerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jason.SGPickerView-DatePickerExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SGPickerView_DatePickerExample.app/SGPickerView_DatePickerExample";
+			};
+			name = Debug;
+		};
+		96B7B1BF1D945A1C009C6F1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SGPickerView_DatePickerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jason.SGPickerView-DatePickerExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SGPickerView_DatePickerExample.app/SGPickerView_DatePickerExample";
+			};
+			name = Release;
+		};
+		96B7B1C11D945A1C009C6F1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SGPickerView_DatePickerExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jason.SGPickerView-DatePickerExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SGPickerView_DatePickerExample;
+			};
+			name = Debug;
+		};
+		96B7B1C21D945A1C009C6F1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SGPickerView_DatePickerExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jason.SGPickerView-DatePickerExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SGPickerView_DatePickerExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96B7B1881D945A1C009C6F1F /* Build configuration list for PBXProject "SGPickerView_DatePickerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B7B1B81D945A1C009C6F1F /* Debug */,
+				96B7B1B91D945A1C009C6F1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B7B1BA1D945A1C009C6F1F /* Build configuration list for PBXNativeTarget "SGPickerView_DatePickerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B7B1BB1D945A1C009C6F1F /* Debug */,
+				96B7B1BC1D945A1C009C6F1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96B7B1BD1D945A1C009C6F1F /* Build configuration list for PBXNativeTarget "SGPickerView_DatePickerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B7B1BE1D945A1C009C6F1F /* Debug */,
+				96B7B1BF1D945A1C009C6F1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96B7B1C01D945A1C009C6F1F /* Build configuration list for PBXNativeTarget "SGPickerView_DatePickerExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B7B1C11D945A1C009C6F1F /* Debug */,
+				96B7B1C21D945A1C009C6F1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96B7B1851D945A1C009C6F1F /* Project object */;
+}

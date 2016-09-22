@@ -20,7 +20,7 @@
 #import "SGPicker.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) SGDatePicker *datePicker;
 @end
 
 @implementation ViewController
@@ -43,7 +43,28 @@
 
 
 - (IBAction)datePicker_bottom:(id)sender {
-    
+    self.datePicker = [[SGDatePicker alloc] init];
+    _datePicker.isBeforeTime = YES; // 日期一定要设置
+    _datePicker.datePickerMode = UIDatePickerModeDate; // 日期一定要设置
+    __weak typeof(self) weakSelf = self;
+    [self.datePicker didFinishSelectedDate:^(NSDate *selectedDate) {
+        weakSelf.title = [self dateStringWithDate:selectedDate DateFormat:@"yyyy年MM月dd日"];
+    }];
+
+    // 时间的获取
+//    _timePicker = [[MHDatePicker alloc] init];
+//    __weak typeof(self) weakSelf = self;
+//    [_timePicker didFinishSelectedDate:^(NSDate *selectedDate) {
+//        weakSelf.title = [weakSelf dateStringWithDate:selectedDate DateFormat:@"MM月dd日 HH:mm"];
+//    }];
+
+}
+- (NSString *)dateStringWithDate:(NSDate *)date DateFormat:(NSString *)dateFormat {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:dateFormat];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+    NSString *str = [dateFormatter stringFromDate:date];
+    return str ? str : @"";
 }
 
 - (IBAction)datePicker_center:(id)sender {

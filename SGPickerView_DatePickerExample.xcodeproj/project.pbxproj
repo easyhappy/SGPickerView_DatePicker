@@ -562,6 +562,7 @@
 				96B7B1BC1D945A1C009C6F1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96B7B1BD1D945A1C009C6F1F /* Build configuration list for PBXNativeTarget "SGPickerView_DatePickerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +571,7 @@
 				96B7B1BF1D945A1C009C6F1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96B7B1C01D945A1C009C6F1F /* Build configuration list for PBXNativeTarget "SGPickerView_DatePickerExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +580,7 @@
 				96B7B1C21D945A1C009C6F1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

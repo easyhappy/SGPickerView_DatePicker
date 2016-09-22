@@ -17,7 +17,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-1S-GKe">
-                            <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                            <rect key="frame" x="10" y="0.0" width="50" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="kcO-DM-cgm"/>
                             </constraints>
@@ -26,7 +26,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbb-aZ-5TK">
-                            <rect key="frame" x="270" y="0.0" width="50" height="44"/>
+                            <rect key="frame" x="260" y="0.0" width="50" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="EsB-Gj-lSX"/>
                             </constraints>
@@ -37,11 +37,11 @@
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="SZh-1S-GKe" firstAttribute="leading" secondItem="t5D-3t-j8o" secondAttribute="leading" id="GtB-Ms-ibu"/>
+                        <constraint firstItem="SZh-1S-GKe" firstAttribute="leading" secondItem="t5D-3t-j8o" secondAttribute="leading" constant="10" id="GtB-Ms-ibu"/>
                         <constraint firstItem="Zbb-aZ-5TK" firstAttribute="top" secondItem="SZh-1S-GKe" secondAttribute="top" id="ZdT-8R-CDu"/>
                         <constraint firstAttribute="bottom" secondItem="Zbb-aZ-5TK" secondAttribute="bottom" id="bd7-kG-qku"/>
                         <constraint firstItem="Zbb-aZ-5TK" firstAttribute="firstBaseline" secondItem="SZh-1S-GKe" secondAttribute="baseline" id="cAd-F0-c1C"/>
-                        <constraint firstAttribute="trailing" secondItem="Zbb-aZ-5TK" secondAttribute="trailing" id="m5g-cW-oe3"/>
+                        <constraint firstAttribute="trailing" secondItem="Zbb-aZ-5TK" secondAttribute="trailing" constant="10" id="m5g-cW-oe3"/>
                         <constraint firstAttribute="height" constant="44" id="ydl-pP-eSl"/>
                         <constraint firstItem="Zbb-aZ-5TK" firstAttribute="baseline" secondItem="SZh-1S-GKe" secondAttribute="firstBaseline" id="zVp-xU-INB"/>
                         <constraint firstItem="Zbb-aZ-5TK" firstAttribute="top" secondItem="t5D-3t-j8o" secondAttribute="top" id="ztW-Se-gyH"/>

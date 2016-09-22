@@ -18,14 +18,24 @@
 
 #import "SGDatePickerSheetView.h"
 
+@interface SGDatePickerSheetView ()
+/** 取消按钮 */
+@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
+/** 确定按钮 */
+@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
+
+@end
+
 @implementation SGDatePickerSheetView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+/** 取消按钮的点击事件 */
+- (void)addTargetCancelBtn:(id)target action:(SEL)action {
+    [self.cancelBtn addTarget:target action:action forControlEvents:(UIControlEventTouchUpInside)];
 }
-*/
+
+/** 确定按钮的点击事件 */
+- (void)addTargetSureBtn:(id)target action:(SEL)action {
+    [self.sureBtn addTarget:target action:action forControlEvents:(UIControlEventTouchUpInside)];
+}
 
 @end

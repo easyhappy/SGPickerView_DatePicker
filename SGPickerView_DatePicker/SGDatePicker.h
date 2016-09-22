@@ -17,7 +17,23 @@
 
 
 #import <UIKit/UIKit.h>
+#import "SGDatePickerSheetView.h"
+
+typedef void (^DataTimeSelect)(NSDate *selectDataTime);
 
 @interface SGDatePicker : UIView
+
+/** 当前选中的Date */
+@property (nonatomic, strong) NSDate *selectDate;
+/** 是否可选择当前时间之前的时间, 默认为NO */
+@property (nonatomic, assign) BOOL isBeforeTime;
+/** DatePickerMode, 默认是DateAndTime */
+@property (nonatomic, assign) UIDatePickerMode datePickerMode;
+
+- (void)didFinishSelectedDate:(DataTimeSelect)selectDataTime;
+
+@property (nonatomic, strong) NSDate *maxSelectDate;
+/** 优先级低于isBeforeTime */
+@property (nonatomic, strong) NSDate *minSelectDate;
 
 @end

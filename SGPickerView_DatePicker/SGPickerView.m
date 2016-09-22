@@ -19,8 +19,12 @@
 #import "SGPickerView.h"
 #import "SGLocationPickerSheetView.h"
 
+#define SG_component_total 3
 #define SG_screenWidth [UIScreen mainScreen].bounds.size.width
 #define SG_screenHeight [UIScreen mainScreen].bounds.size.height
+#define SG_columnWidth SG_screenWidth / SG_component_total
+#define SGLocationPickerSheetViewHeight SG_screenHeight * 0.35
+
 
 @interface SGPickerView ()<UIPickerViewDelegate, UIPickerViewDataSource>
 /** SGLocationPickerSheetView对象 */
@@ -41,8 +45,6 @@
 @end
 
 @implementation SGPickerView
-
-static int const SGLocationPickerSheetViewHeight = 250;
 
 - (instancetype)init {
     
@@ -110,7 +112,6 @@ static int const SGLocationPickerSheetViewHeight = 250;
     }];
 }
 
-
 #pragma mark - 获取地区数据
 - (void)getLocationDateSourse {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Address" ofType:@"plist"];
@@ -130,7 +131,7 @@ static int const SGLocationPickerSheetViewHeight = 250;
 #pragma mark - - - UIPickerViewDataSource - UIPickerViewDelegate
 // 返回列数
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 3;
+    return SG_component_total;
 }
 // 每列多少行
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
@@ -157,11 +158,11 @@ static int const SGLocationPickerSheetViewHeight = 250;
 // 每列宽度
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
     if (component == 0) {
-        return 110;
+        return SG_columnWidth;
     } else if (component == 1) {
-        return 100;
+        return SG_columnWidth;
     } else {
-        return 110;
+        return SG_columnWidth;
     }
 }
 
@@ -206,7 +207,7 @@ static int const SGLocationPickerSheetViewHeight = 250;
     
     if (component == 0) {
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 100, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth, 30)];
         
         label.textAlignment = NSTextAlignmentCenter;
         
@@ -218,7 +219,7 @@ static int const SGLocationPickerSheetViewHeight = 250;
         
     }else if (component == 1) {
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 180, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth, 30)];
         
         label.text = [self.city_Arr objectAtIndex:row];
         
@@ -229,7 +230,7 @@ static int const SGLocationPickerSheetViewHeight = 250;
         label.backgroundColor = [UIColor clearColor];
     } else {
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 180, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth, 30)];
         
         label.text = [self.area_Arr objectAtIndex:row];
         

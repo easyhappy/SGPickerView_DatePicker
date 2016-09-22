@@ -3,14 +3,75 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SGDatePickerSheetView">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="BNT-qR-vmK" customClass="SGDatePickerSheetView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fz-rI-uvF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dP-BN-s7c">
+                            <rect key="frame" x="10" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="Lbi-h9-EgN"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R76-HP-GFr">
+                            <rect key="frame" x="260" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="0j4-DY-wQc"/>
+                            </constraints>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="R76-HP-GFr" secondAttribute="trailing" constant="10" id="4nc-x2-jdg"/>
+                        <constraint firstItem="1dP-BN-s7c" firstAttribute="leading" secondItem="6Fz-rI-uvF" secondAttribute="leading" constant="10" id="9kU-na-2gY"/>
+                        <constraint firstItem="R76-HP-GFr" firstAttribute="baseline" secondItem="1dP-BN-s7c" secondAttribute="firstBaseline" id="AVe-Nh-P6k"/>
+                        <constraint firstItem="R76-HP-GFr" firstAttribute="firstBaseline" secondItem="1dP-BN-s7c" secondAttribute="baseline" id="cww-YU-zNZ"/>
+                        <constraint firstAttribute="bottom" secondItem="R76-HP-GFr" secondAttribute="bottom" id="edd-o5-dHl"/>
+                        <constraint firstItem="R76-HP-GFr" firstAttribute="top" secondItem="1dP-BN-s7c" secondAttribute="top" id="gx9-Wj-hjQ"/>
+                        <constraint firstItem="R76-HP-GFr" firstAttribute="top" secondItem="6Fz-rI-uvF" secondAttribute="top" id="gyX-yB-MzX"/>
+                        <constraint firstAttribute="height" constant="44" id="qZO-GH-FIz"/>
+                    </constraints>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="w1m-2f-Aa7">
+                    <rect key="frame" x="0.0" y="44" width="320" height="206"/>
+                    <date key="date" timeIntervalSinceReferenceDate="496267365.69634098">
+                        <!--2016-09-22 20:02:45 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="w1m-2f-Aa7" secondAttribute="trailing" id="7xZ-AE-c9R"/>
+                <constraint firstAttribute="bottom" secondItem="w1m-2f-Aa7" secondAttribute="bottom" id="Ai5-22-luC"/>
+                <constraint firstItem="6Fz-rI-uvF" firstAttribute="top" secondItem="BNT-qR-vmK" secondAttribute="top" id="FKy-Fk-a8Z"/>
+                <constraint firstItem="w1m-2f-Aa7" firstAttribute="top" secondItem="6Fz-rI-uvF" secondAttribute="bottom" id="jq4-jp-7kh"/>
+                <constraint firstItem="w1m-2f-Aa7" firstAttribute="leading" secondItem="BNT-qR-vmK" secondAttribute="leading" id="lMc-TF-rzV"/>
+                <constraint firstItem="6Fz-rI-uvF" firstAttribute="leading" secondItem="BNT-qR-vmK" secondAttribute="leading" id="oVD-n4-BL6"/>
+                <constraint firstAttribute="trailing" secondItem="6Fz-rI-uvF" secondAttribute="trailing" id="yl1-aX-H8J"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelBtn" destination="1dP-BN-s7c" id="P83-Hr-mmJ"/>
+                <outlet property="datePicker" destination="w1m-2f-Aa7" id="iNd-j2-1rn"/>
+                <outlet property="sureBtn" destination="R76-HP-GFr" id="xEE-zp-gm3"/>
+            </connections>
+            <point key="canvasLocation" x="261" y="302"/>
         </view>
     </objects>
 </document>

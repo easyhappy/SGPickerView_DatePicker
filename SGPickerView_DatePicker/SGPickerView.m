@@ -81,14 +81,24 @@ static CGFloat const SG_animateWithDuration = 0.2;
 
 #pragma mark - - - 按钮的点击事件
 - (void)sureBtnClick {
-    NSString *province = [NSString stringWithFormat:@"%@", [self.province_Arr objectAtIndex:[self.locationPickerSheetView.pickerView selectedRowInComponent:0]]];
-    NSString *city = [NSString stringWithFormat:@"%@", [self.city_Arr objectAtIndex:[self.locationPickerSheetView.pickerView selectedRowInComponent:1]]];
-    NSString *area = [NSString stringWithFormat:@"%@", [self.area_Arr objectAtIndex:[self.locationPickerSheetView.pickerView selectedRowInComponent:2]]];
-    
-    NSString *location = [NSString stringWithFormat:@"%@ %@ %@", province, city, area];
-    
-    self.locationMessage(location);
-    
+    if (self.pickerViewType == SGPickerViewTypeCenter) {
+        NSString *province = [NSString stringWithFormat:@"%@", [self.province_Arr objectAtIndex:[self.locationPickerCenterView.pickerView selectedRowInComponent:0]]];
+        NSString *city = [NSString stringWithFormat:@"%@", [self.city_Arr objectAtIndex:[self.locationPickerCenterView.pickerView selectedRowInComponent:1]]];
+        NSString *area = [NSString stringWithFormat:@"%@", [self.area_Arr objectAtIndex:[self.locationPickerCenterView.pickerView selectedRowInComponent:2]]];
+        
+        NSString *location = [NSString stringWithFormat:@"%@ %@ %@", province, city, area];
+        
+        self.locationMessage(location);
+    } else {
+        NSString *province = [NSString stringWithFormat:@"%@", [self.province_Arr objectAtIndex:[self.locationPickerSheetView.pickerView selectedRowInComponent:0]]];
+        NSString *city = [NSString stringWithFormat:@"%@", [self.city_Arr objectAtIndex:[self.locationPickerSheetView.pickerView selectedRowInComponent:1]]];
+        NSString *area = [NSString stringWithFormat:@"%@", [self.area_Arr objectAtIndex:[self.locationPickerSheetView.pickerView selectedRowInComponent:2]]];
+        
+        NSString *location = [NSString stringWithFormat:@"%@ %@ %@", province, city, area];
+        
+        self.locationMessage(location);
+    }
+
     [self dismissPickerView];
 }
 

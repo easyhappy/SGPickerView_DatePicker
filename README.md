@@ -12,7 +12,7 @@
 ```Objective-C
     SGPickerView *pickerView = [[SGPickerView alloc] init];
     
-    pickerView.pickerViewType = SGPickerViewTypeCenter; // 默认pickerViewType为SGPickerViewTypeBottom
+    pickerView.pickerViewType = SGPickerViewTypeCenter; // 默认pickerViewType为SGPickerViewTypeBottom， 要想 pickerViewType 属性起到作用， 一定要在对象方法 show 之前设置
     
     [pickerView show];
     
@@ -27,6 +27,8 @@
 ```Objective-C
     SGDatePicker *datePicker = [[SGDatePicker alloc] init];
     
+    datePicker.datePickerType = SGPickerViewTypeCenter; // 默认datePickerType为SGPickerViewTypeBottom， 要想日期设置起到作用：一定设在 datePickerMode 属性之前设置
+
     datePicker.isBeforeTime = YES; 
     
     datePicker.datePickerMode = UIDatePickerModeDate; // 日期一定要设置

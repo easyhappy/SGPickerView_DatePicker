@@ -22,8 +22,8 @@
     
     };
 ```
- 
-    * 日期的选择
+
+   * 日期的选择
 ```Objective-C
     SGDatePicker *datePicker = [[SGDatePicker alloc] init];
     

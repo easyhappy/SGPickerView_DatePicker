@@ -48,8 +48,10 @@
 @end
 
 @implementation SGPickerView
-
+/** SGLocationPickerCenterView距离X轴的距离 */
 static CGFloat const margin_column_X = 20;
+/** 动画时间 */
+static CGFloat const SG_animateWithDuration = 0.2;
 
 - (instancetype)init {
     
@@ -96,7 +98,7 @@ static CGFloat const margin_column_X = 20;
         [self.coverView removeFromSuperview];
         [self removeFromSuperview];
     } else {
-        [UIView animateWithDuration:0.2 animations:^{
+        [UIView animateWithDuration:SG_animateWithDuration animations:^{
             self.locationPickerSheetView.transform = CGAffineTransformMakeTranslation(0, SGLocationPickerSheetViewHeight);
             self.coverView.alpha = 0.0;
         } completion:^(BOOL finished) {
@@ -110,10 +112,9 @@ static CGFloat const margin_column_X = 20;
 // 出现
 - (void)show {
     if (self.pickerViewType == SGPickerViewTypeCenter) {
-        [self.locationPickerSheetView removeFromSuperview];
         [self setupSGLocationPickerCenterView];
         [self animationWithView:self.locationPickerCenterView duration:0.3];
-        [UIView animateWithDuration:0.2 animations:^{
+        [UIView animateWithDuration:SG_animateWithDuration animations:^{
             self.coverView.alpha = 0.2;
         }];
     } else {
@@ -136,7 +137,6 @@ static CGFloat const margin_column_X = 20;
 
 - (void)setupSGLocationPickerCenterView {
     [self.locationPickerCenterView removeFromSuperview];
-    self.locationPickerSheetView = nil;
     
     CGFloat pickerCenterView_X = margin_column_X;
     CGFloat pickerCenterView_Y = (SG_screenHeight - SGLocationPickerCenterViewHeight) * 0.5;

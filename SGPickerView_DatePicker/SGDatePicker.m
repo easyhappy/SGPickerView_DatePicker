@@ -36,6 +36,11 @@
 
 @implementation SGDatePicker
 
+/** SGDatePickerCenterView距离X轴的距离 */
+static CGFloat const margin_column_X = 20;
+/** 动画时间 */
+static CGFloat const SG_animateWithDuration = 0.2;
+
 - (instancetype)init {
     
     if (self = [super init]) {
@@ -77,7 +82,7 @@
         [self.coverView removeFromSuperview];
         [self removeFromSuperview];
     } else {
-        [UIView animateWithDuration:0.2 animations:^{
+        [UIView animateWithDuration:SG_animateWithDuration animations:^{
             self.datePickerSheetView.transform = CGAffineTransformMakeTranslation(0, SGLocationPickerSheetViewHeight);
             self.coverView.alpha = 0.0;
         } completion:^(BOOL finished) {
@@ -94,7 +99,7 @@
         [self animationWithView:self.datePickerCenterView duration:0.3];
         self.coverView.alpha = 0.2;
     } else {
-        [UIView animateWithDuration:0.2 animations:^{
+        [UIView animateWithDuration:SG_animateWithDuration animations:^{
             self.datePickerSheetView.transform = CGAffineTransformMakeTranslation(0, - SGLocationPickerSheetViewHeight);
             self.coverView.alpha = 0.2;
         }];
@@ -120,7 +125,7 @@
     self.datePickerSheetView = nil;
     
     self.datePickerCenterView = [[[NSBundle mainBundle] loadNibNamed:@"SGDatePickerCenterView" owner:nil options:nil] firstObject];
-    CGFloat pickerCenterViewX = 20;
+    CGFloat pickerCenterViewX = margin_column_X;
     CGFloat pickerCenterViewY = (SG_screenHeight - SGLocationPickerCenterViewHeight) * 0.5;
     _datePickerCenterView.frame = CGRectMake(pickerCenterViewX, pickerCenterViewY, SG_screenWidth - 2 * pickerCenterViewX, SGLocationPickerCenterViewHeight);
     _datePickerCenterView.layer.cornerRadius = 7;

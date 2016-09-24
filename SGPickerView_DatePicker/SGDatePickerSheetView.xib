@@ -22,7 +22,7 @@
                                 <constraint firstAttribute="width" constant="50" id="Lbi-h9-EgN"/>
                             </constraints>
                             <state key="normal" title="取消">
-                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.50943243503570557" green="0.51710599660873413" blue="0.55027955770492554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R76-HP-GFr">

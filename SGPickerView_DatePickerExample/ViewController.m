@@ -5,23 +5,17 @@
 //  Created by Sorgle on 16/9/23.
 //  Copyright © 2016年 Sorgle. All rights reserved.
 //
-
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 //
-//  - - 欢迎前来GitHub下载最新、最完善的Demo - - - - - - - - - - - - - - - - - - - //
+//  - - 如在使用中, 遇到什么问题或者有更好建议者, 请于kingsic@126.com邮箱联系 - - - - - //
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //  - - GitHub下载地址 https://github.com/kingsic/SGPickerView_DatePicker.git - - //
 //
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
-
 #import "ViewController.h"
 #import "SGPicker.h"
-
-@interface ViewController ()
-@property (nonatomic, strong) SGDatePicker *datePicker;
-@end
 
 @implementation ViewController
 
@@ -32,25 +26,32 @@
 
 - (IBAction)pickerView_bottom:(id)sender {
     SGPickerView *pickerView = [[SGPickerView alloc] init];
+    [pickerView show];
     pickerView.locationMessage = ^(NSString *str){
         self.title = str;
     };
 }
 
 - (IBAction)pickerView_center:(id)sender {
+    SGPickerView *pickerView = [[SGPickerView alloc] init];
+    pickerView.pickerViewType = SGPickerViewTypeCenter;
     
+    [pickerView show];
+    pickerView.locationMessage = ^(NSString *str){
+        self.title = str;
+    };
 }
 
 
 - (IBAction)datePicker_bottom:(id)sender {
-    self.datePicker = [[SGDatePicker alloc] init];
-    _datePicker.isBeforeTime = YES; // 日期一定要设置
-    _datePicker.datePickerMode = UIDatePickerModeDate; // 日期一定要设置
+    SGDatePicker *datePicker = [[SGDatePicker alloc] init];
+    datePicker.isBeforeTime = YES; // 日期一定要设置
+    datePicker.datePickerMode = UIDatePickerModeDate; // 日期一定要设置
     __weak typeof(self) weakSelf = self;
-    [self.datePicker didFinishSelectedDate:^(NSDate *selectedDate) {
+    [datePicker didFinishSelectedDate:^(NSDate *selectedDate) {
         weakSelf.title = [self dateStringWithDate:selectedDate DateFormat:@"yyyy年MM月dd日"];
     }];
-
+    [datePicker show];
     // 时间的获取
 //    _timePicker = [[MHDatePicker alloc] init];
 //    __weak typeof(self) weakSelf = self;
@@ -68,7 +69,15 @@
 }
 
 - (IBAction)datePicker_center:(id)sender {
-    
+    SGDatePicker *datePicker = [[SGDatePicker alloc] init];
+    datePicker.datePickerType = SGDatePickerTypeCenter;
+    datePicker.isBeforeTime = YES; // 日期一定要设置
+    datePicker.datePickerMode = UIDatePickerModeDate; // 日期一定要设置
+    __weak typeof(self) weakSelf = self;
+    [datePicker didFinishSelectedDate:^(NSDate *selectedDate) {
+        weakSelf.title = [self dateStringWithDate:selectedDate DateFormat:@"yyyy年MM月dd日"];
+    }];
+    [datePicker show];
 }
 
 

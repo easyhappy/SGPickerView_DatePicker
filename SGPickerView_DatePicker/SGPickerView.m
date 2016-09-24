@@ -5,30 +5,33 @@
 //  Created by Sorgle on 16/9/23.
 //  Copyright © 2016年 Sorgle. All rights reserved.
 //
-
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 //
-//  - - 欢迎前来GitHub下载最新、最完善的Demo - - - - - - - - - - - - - - - - - - - //
+//  - - 如在使用中, 遇到什么问题或者有更好建议者, 请于kingsic@126.com邮箱联系 - - - - - //
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //  - - GitHub下载地址 https://github.com/kingsic/SGPickerView_DatePicker.git - - //
 //
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
-
 #import "SGPickerView.h"
 #import "SGLocationPickerSheetView.h"
+#import "SGLocationPickerCenterView.h"
 
 #define SG_component_total 3
 #define SG_screenWidth [UIScreen mainScreen].bounds.size.width
 #define SG_screenHeight [UIScreen mainScreen].bounds.size.height
 #define SG_columnWidth SG_screenWidth / SG_component_total
 #define SGLocationPickerSheetViewHeight SG_screenHeight * 0.35
+#define SGLocationPickerCenterViewHeight SG_screenHeight * 0.4
 
 
 @interface SGPickerView ()<UIPickerViewDelegate, UIPickerViewDataSource>
 /** SGLocationPickerSheetView对象 */
 @property (nonatomic, strong) SGLocationPickerSheetView *locationPickerSheetView;
+/** SGLocationPickerSheetView对象 */
+@property (nonatomic, strong) SGLocationPickerCenterView *locationPickerCenterView;
+
 /** 遮盖 */
 @property (nonatomic, strong) UIButton *coverView;
 // data
@@ -46,11 +49,15 @@
 
 @implementation SGPickerView
 
+static CGFloat const margin_column_X = 20;
+
 - (instancetype)init {
     
     if (self = [super init]) {
         self.frame = CGRectMake(0, 0, SG_screenWidth, SG_screenHeight); // 设置self的frame， 若没有设置button的点击事件不响应（想要响应button的点击事件， 其父视图必须有frame且大于button）
         [[[UIApplication sharedApplication] keyWindow] addSubview:self];
+        
+        self.pickerViewType = SGPickerViewTypeBottom;
         
         // 遮盖
         self.coverView = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -59,22 +66,13 @@
         [_coverView addTarget:self action:@selector(dismissPickerView) forControlEvents:UIControlEventTouchUpInside];
         _coverView.frame = CGRectMake(0, 0, SG_screenWidth, SG_screenHeight);
         [self addSubview:self.coverView];
-        
+
         // 获取数据
         [self getLocationDateSourse];
         
-        // SGLocationPickerSheetViewHeight
-        self.locationPickerSheetView = [[[NSBundle mainBundle] loadNibNamed:@"SGLocationPickerSheetView" owner:nil options:nil] firstObject];
-        _locationPickerSheetView.frame = CGRectMake(0, SG_screenHeight, SG_screenWidth, SGLocationPickerSheetViewHeight);
-        _locationPickerSheetView.pickerView.delegate = self;
-        _locationPickerSheetView.pickerView.dataSource = self;
-        [_locationPickerSheetView addTargetCancelBtn:self action:@selector(dismissPickerView)];
-        [_locationPickerSheetView addTargetSureBtn:self action:@selector(sureBtnClick)];
-        [self addSubview:_locationPickerSheetView];
-        
-        // 出现
-        [self show];
-        
+        // SGLocationPickerSheetView
+        [self setupSGLocationPickerSheetView];
+
     }
     return self;
 }
@@ -94,22 +92,83 @@
 
 // 消失
 - (void)dismissPickerView {
-    [UIView animateWithDuration:0.2 animations:^{
-        self.locationPickerSheetView.transform = CGAffineTransformMakeTranslation(0, SGLocationPickerSheetViewHeight);
-        self.coverView.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        [self.locationPickerSheetView removeFromSuperview];
+    if (self.pickerViewType == SGPickerViewTypeCenter) {
         [self.coverView removeFromSuperview];
         [self removeFromSuperview];
-    }];
+    } else {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.locationPickerSheetView.transform = CGAffineTransformMakeTranslation(0, SGLocationPickerSheetViewHeight);
+            self.coverView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [self.locationPickerSheetView removeFromSuperview];
+            [self.coverView removeFromSuperview];
+            [self removeFromSuperview];
+        }];
+    }
 }
 
 // 出现
 - (void)show {
-    [UIView animateWithDuration:0.2 animations:^{
-        self.locationPickerSheetView.transform = CGAffineTransformMakeTranslation(0, - SGLocationPickerSheetViewHeight);
-        self.coverView.alpha = 0.2;
-    }];
+    if (self.pickerViewType == SGPickerViewTypeCenter) {
+        [self.locationPickerSheetView removeFromSuperview];
+        [self setupSGLocationPickerCenterView];
+        [self animationWithView:self.locationPickerCenterView duration:0.3];
+        [UIView animateWithDuration:0.2 animations:^{
+            self.coverView.alpha = 0.2;
+        }];
+    } else {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.locationPickerSheetView.transform = CGAffineTransformMakeTranslation(0, - SGLocationPickerSheetViewHeight);
+            self.coverView.alpha = 0.2;
+        }];
+    }
+}
+
+- (void)setupSGLocationPickerSheetView {
+    self.locationPickerSheetView = [[[NSBundle mainBundle] loadNibNamed:@"SGLocationPickerSheetView" owner:nil options:nil] firstObject];
+    _locationPickerSheetView.frame = CGRectMake(0, SG_screenHeight, SG_screenWidth, SGLocationPickerSheetViewHeight);
+    _locationPickerSheetView.pickerView.delegate = self;
+    _locationPickerSheetView.pickerView.dataSource = self;
+    [_locationPickerSheetView addTargetCancelBtn:self action:@selector(dismissPickerView)];
+    [_locationPickerSheetView addTargetSureBtn:self action:@selector(sureBtnClick)];
+    [self addSubview:_locationPickerSheetView];
+}
+
+- (void)setupSGLocationPickerCenterView {
+    [self.locationPickerCenterView removeFromSuperview];
+    self.locationPickerSheetView = nil;
+    
+    CGFloat pickerCenterView_X = margin_column_X;
+    CGFloat pickerCenterView_Y = (SG_screenHeight - SGLocationPickerCenterViewHeight) * 0.5;
+    CGFloat pickerCenterView_W = SG_screenWidth - 2 * pickerCenterView_X;
+    self.locationPickerCenterView = [[[NSBundle mainBundle] loadNibNamed:@"SGLocationPickerCenterView" owner:nil options:nil] firstObject];
+    _locationPickerCenterView.frame = CGRectMake(pickerCenterView_X, pickerCenterView_Y, pickerCenterView_W, SGLocationPickerCenterViewHeight);
+    _locationPickerCenterView.layer.cornerRadius = 7;
+    _locationPickerCenterView.layer.masksToBounds = YES;
+    _locationPickerCenterView.pickerView.delegate = self;
+    _locationPickerCenterView.pickerView.dataSource = self;
+    [_locationPickerCenterView addTargetCancelBtn:self action:@selector(dismissPickerView)];
+    [_locationPickerCenterView addTargetSureBtn:self action:@selector(sureBtnClick)];
+    [self addSubview:_locationPickerCenterView];
+}
+
+/** SGLocationPickerCenterView弹出样式 */
+- (void)animationWithView:(UIView *)view duration:(CFTimeInterval)duration{
+    
+    CAKeyframeAnimation * animation;
+    animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    animation.duration = duration;
+    animation.removedOnCompletion = NO;
+    
+    animation.fillMode = kCAFillModeForwards;
+    
+    NSMutableArray *values_Arr = [NSMutableArray array];
+    [values_Arr addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)]];
+    [values_Arr addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1.0)]];
+    [values_Arr addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
+    animation.values = values_Arr;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName: @"easeInEaseOut"];
+    [view.layer addAnimation:animation forKey:nil];
 }
 
 #pragma mark - 获取地区数据
@@ -158,11 +217,11 @@
 // 每列宽度
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
     if (component == 0) {
-        return SG_columnWidth;
+        return SG_columnWidth - margin_column_X;
     } else if (component == 1) {
         return SG_columnWidth;
     } else {
-        return SG_columnWidth;
+        return SG_columnWidth - margin_column_X;
     }
 }
 
@@ -207,7 +266,7 @@
     
     if (component == 0) {
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth - margin_column_X, 30)];
         
         label.textAlignment = NSTextAlignmentCenter;
         
@@ -219,7 +278,7 @@
         
     }else if (component == 1) {
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth - margin_column_X, 30)];
         
         label.text = [self.city_Arr objectAtIndex:row];
         
@@ -230,7 +289,7 @@
         label.backgroundColor = [UIColor clearColor];
     } else {
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SG_columnWidth - margin_column_X, 30)];
         
         label.text = [self.area_Arr objectAtIndex:row];
         

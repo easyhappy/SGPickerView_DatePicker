@@ -44,6 +44,7 @@
 
 
 - (IBAction)datePicker_bottom:(id)sender {
+    // 日期
     SGDatePicker *datePicker = [[SGDatePicker alloc] init];
     datePicker.isBeforeTime = YES; // 日期一定要设置
     datePicker.datePickerMode = UIDatePickerModeDate; // 日期一定要设置
@@ -52,13 +53,6 @@
         weakSelf.title = [self dateStringWithDate:selectedDate DateFormat:@"yyyy年MM月dd日"];
     }];
     [datePicker show];
-    // 时间的获取
-//    _timePicker = [[MHDatePicker alloc] init];
-//    __weak typeof(self) weakSelf = self;
-//    [_timePicker didFinishSelectedDate:^(NSDate *selectedDate) {
-//        weakSelf.title = [weakSelf dateStringWithDate:selectedDate DateFormat:@"MM月dd日 HH:mm"];
-//    }];
-
 }
 - (NSString *)dateStringWithDate:(NSDate *)date DateFormat:(NSString *)dateFormat {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -67,15 +61,13 @@
     NSString *str = [dateFormatter stringFromDate:date];
     return str ? str : @"";
 }
-
 - (IBAction)datePicker_center:(id)sender {
+    // 时间
     SGDatePicker *datePicker = [[SGDatePicker alloc] init];
     datePicker.datePickerType = SGDatePickerTypeCenter;
-    datePicker.isBeforeTime = YES; // 日期一定要设置
-    datePicker.datePickerMode = UIDatePickerModeDate; // 日期一定要设置
     __weak typeof(self) weakSelf = self;
     [datePicker didFinishSelectedDate:^(NSDate *selectedDate) {
-        weakSelf.title = [self dateStringWithDate:selectedDate DateFormat:@"yyyy年MM月dd日"];
+        weakSelf.title = [self dateStringWithDate:selectedDate DateFormat:@"MM月dd日 HH:mm"];
     }];
     [datePicker show];
 }

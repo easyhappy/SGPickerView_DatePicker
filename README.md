@@ -8,7 +8,7 @@
 
 * 通过 alloc init 方法创建
 
-    * 地区的选择
+##   * 地区的选择
 ```Objective-C
     SGPickerView *pickerView = [[SGPickerView alloc] init];
     
@@ -23,7 +23,7 @@
     };
 ```
 
-   * 日期的选择
+##   * 日期的选择
 ```Objective-C
     SGDatePicker *datePicker = [[SGDatePicker alloc] init];
     
